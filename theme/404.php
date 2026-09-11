@@ -2,10 +2,10 @@
 /**
  * Jasmine 主题
  *
- * @package Jasmine
- * @author Kent Liao
- * @version 1.0.0
- * @link https://www.sanji.one
+ * @package JasminePlus
+ * @author 罗伊
+ * @version 3.1.0
+ * @link https://www.roysgensokyo.space/
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;

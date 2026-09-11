@@ -1,42 +1,39 @@
-# Jasmine
+# Jasmine_Plus
 
-Jasmine 是一款精致的 Typecho 博客主题，界面在保持简洁的基础之上，还拥有良好的文字阅读体验。
+Jasmine_Plus 是基于 Typecho 极简主义经典主题 **Jasmine**（原作者 Kent Liao）的二次开发修改版本。本主题在保留原版精致、克制、黑白留白的审美风格基础上，加入了更多实用的功能定制，旨在为内容创作者提供更加生动且高度自定义的博客体验。
 
-**预览地址：[时光散记](https://www.sanji.one/)**
+**本分支为根据个人需要，针对PJAX优化的版本**
 
-> 如果觉得主题还不错，请帮忙点个 star 🌟，这将会是我维护主题的坚实动力。
+| 示例网站：[森罗幻想](https://blog.roysgensokyo.space/) |
+| --- |
+| <img width="1635" height="970" alt="image" src="https://github.com/user-attachments/assets/e7cc1296-efd6-40ce-adbe-b5d099b63ca0" style="max-width: 720px; width: 100%; height: auto;" /> |
+
+## 🚀 功能特性
+
+- 🎨 **极简自适应设计**：基于 Bootstrap 5 构建，完美适配桌面与移动端设备。支持一键进行**深色/浅色（Dark/Light）模式**切换。
+- 🖼️ **常驻随机 Banner图**：支持在首页顶部自动轮播自定义 Banner 图。只需将图片丢入指定目录，系统即可在每次访问时随机呈现。
+- 📝 **双重文章样式**：
+  - **经典模式**：适合常规技术、长文写作，支持自动生成文章目录（TOC）、分类、标签展示。
+  - **说说模式**：适合发表简短感悟或日常动态，以类似微博、朋友圈的无标题头像气泡流形式展示。
+- 📸 **灵活的多重缩略图**：可通过自定义字段自由配置：
+  - 无缩略图模式。
+  - 单张图片缩略图（在桌面端右侧展示，移动端隐藏）。
+  - **网格缩略图**：自动提取正文前 3 张图片以精美的 3 格网格布局进行展示（移动端同步适配）。
+- 🔗 **自定义独立页面图标**：支持通过页面自定义字段绑定 Tabler Icons，并自由控制是否在导航栏中显示。
+- 🔍 **内置功能完善**：包括搜索、热门文章、热门标签、最新评论、友情链接等侧边栏 Widget。
+- 🛠️ **SEO 友好**：原生集成 Schema.org 结构化微数据，有利于搜索引擎的抓取与索引。
 
 
-## 特色
+## 🛠️ 安装步骤
 
-* 响应式：适应不同设备，提供最佳的阅读体验；
-* 夜晚模式：支持一键切换白天/夜晚配色；
-* 文章样式：文章提供多种显示样式选择，让阅读不再单调；
-* 文章置顶：可将重要的文章置顶显示，提高曝光度；
-* 代码高亮：自动识别代码语言，显示不同高亮内容，让代码更易于阅读；
-* SEO优化：针对搜索引擎优化，语义化标签构建网页；
-* 更多内容，等你发现……
+1. **下载主题**：将本项目的你需要的分支克隆或下载压缩包解压至本地。
+2. **上传至服务器**：将解压后的文件夹重命名为 `Jasmine`，并上传到 Typecho 博客安装目录下的 `usr/themes/` 目录中。
+3. **启用主题**：登录 Typecho 后台，点击 **“控制台” -> “外观”**，找到 **JasminePlus** 主题，点击 **“启用”**。
+4. **后台配置**：在主题设置中配置分类数量等核心选项。
 
-## 安装主题
+## 📄 许可证
 
-1. 下载主题 [Jasmine](https://github.com/liaocp666/Jasmine/releases/latest/download/Jasmine.zip)
-2. 解压下载文件，将解压后的文件夹重命名为`jasmine`，并上传至 `usr/themes/` 目录下
-3. 进入 Typecho 控制台，在外观中启用 Jasmine 主题
+本项目基于 [GNU General Public License v3.0](file:///d:/Code/Github/Jasmine_Plus/LICENSE) 开源协议授权，您可以自由地使用、修改和分发，但必须保留原作者的版权声明并以相同协议开源。
 
-## 设置文档
-
-[Jasmine 主题设置文档](https://gitee.com/LiaoChunping/Jasmine/wikis/Home)
-
-## 交流反馈
-
-欢迎进群交流主题、Typecho 等问题。 QQ 群：[539165194](https://qm.qq.com/cgi-bin/qm/qr?k=oXM0EmLxXmgKfE1UDRlBY-g7Rkrx30oL&jump_from=webapi&authKey=uQdwWraveNKYBm/BQs88WXkNagEUr9tCkf/gbdQ9FasOviKYVhUd/wUME0q0AtnI)
-
-## 许可协议
-
-主题使用 [GPL V3.0](https://github.com/liaocp666/theme-jasmine/blob/main/LICENSE) 许可协议。
-
-## 打赏一下
-
-如果喜欢这款主题，不如使用微信扫一扫，请作者喝杯咖啡。
-
-![wx](https://user-images.githubusercontent.com/27202776/227807562-5340971b-a292-4c70-afbb-1a7d242e46db.jpg)
+* 原作者：[Kent Liao](https://gitee.com/LiaoChunping/Jasmine)
+* 二次开发者：[罗伊](https://www.roysgensokyo.space/)

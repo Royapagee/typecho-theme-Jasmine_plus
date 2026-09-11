@@ -2,7 +2,28 @@
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
+// 读取 assets/banner 目录下所有图片并随机抽取一张
+$bannerDir = __DIR__ . '/../assets/banner';
+$bannerImages = [];
+$allowedExt = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'bmp', 'svg'];
+
+if (is_dir($bannerDir)) {
+    $files = scandir($bannerDir);
+    foreach ($files as $file) {
+        if ($file === '.' || $file === '..') continue;
+        $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+        if (in_array($ext, $allowedExt)) {
+            $bannerImages[] = 'assets/banner/' . $file;
+        }
+    }
+}
 ?>
+
+<?php if (!empty($bannerImages)): ?>
+<div class="container-fluid px-4 pt-4 pb-0">
+    <img src="<?php $this->options->themeUrl($bannerImages[array_rand($bannerImages)]); ?>" class="w-100 rounded banner-img" alt="banner">
+</div>
+<?php endif; ?>
 
 <nav class="navbar navbar-expand-lg border-bottom py-0 fw-medium sticky-top navbar-background border-light-subtle bg-body bg-opacity-75">
     <div class="container-fluid p-lg-4 px-4 py-3" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
@@ -25,6 +46,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                href="javascript:changeBsTheme()">
                 <i class="ti ti-sun-moon px-3 py-1 rounded fs-5"></i>
             </a>
+
             <button class="navbar-toggler border-0 pe-0" type="button" data-bs-toggle="offcanvas" href="#mobile-navbar" role="button" aria-controls="mobile-navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>

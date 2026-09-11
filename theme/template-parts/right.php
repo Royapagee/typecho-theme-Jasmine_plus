@@ -4,7 +4,8 @@
     <div class="container-fluid p-4 border-bottom border-light-subtle">
         <div class="row gap-2">
             <div class="col-12">
-                <p class="text-body-secondary text-truncate mb-0 fs-6 py-1">
+                <h4 class="mb-2 fw-semibold text-center"><?php $this->options->title(); ?></h4>
+                <p class="text-body-secondary mb-0 fs-6 py-1">
                     <?php $this->options->description(); ?>
                 </p>
             </div>

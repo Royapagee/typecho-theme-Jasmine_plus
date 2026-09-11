@@ -204,7 +204,7 @@ a:hover, a:focus, a:focus-visible {
     display: block;
     max-width: 100%;
     height: auto;
-    margin-bottom: 36px;
+    margin-bottom: 0px;
 }
 
 #post-content .tags {
@@ -314,4 +314,76 @@ a:hover, a:focus, a:focus-visible {
     #post-content h1, #post-content h2, #post-content h3 {
         font-size: 1.5rem!important;
     }
+}
+
+.thumbnail-grid {
+    display: flex;
+    gap: 8px;
+}
+
+.thumbnail-grid-item {
+    flex: 1;
+    height: 130px;
+    background-size: cover;
+    background-position: center;
+    min-width: 0;
+}
+
+.banner-img {
+    max-height: 240px;
+    object-fit: cover;
+}
+
+/* ─── PJAX 过渡动画 ─── */
+
+/* 淡出：点击导航后，旧内容快速变半透并略微下移 */
+.pjax-fade-out {
+    opacity: 0.3;
+    transform: translateY(6px);
+    transition: opacity 0.18s ease-out, transform 0.18s ease-out;
+    pointer-events: none;
+}
+
+/* 淡入起始帧：新内容从上方微移入 */
+.pjax-fade-in {
+    opacity: 0;
+    transform: translateY(-8px);
+}
+
+/* 淡入播放帧 */
+.pjax-fade-in-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+}
+
+/* ─── 顶部 PJAX 加载进度条 ─── */
+#pjax-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: rgba(var(--primary-color-rgba));
+    box-shadow: 0 0 8px 2px rgba(var(--primary-color-rgba), 0.35);
+    z-index: 9999;
+    opacity: 0;
+    transition: width 0.3s ease-out, opacity 0.4s ease-out;
+    pointer-events: none;
+}
+
+#pjax-progress::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(var(--primary-color-rgba)), transparent);
+    opacity: 0.6;
+    filter: blur(3px);
+}
+
+#pjax-progress.active {
+    opacity: 1;
 }

@@ -1,15 +1,13 @@
 <?php
 /**
- * <p>黑白之间，留白生诗。简至奢侈，静若自持。<p/>
+ * <p>黑白之间，留白生诗。简至奢侈，静若自持。罗伊基于 Kent Liao 原版的二次修改版本，新增了一种展示样式，标题右上角展示，banner图常驻并随机切换功能<p/>
  *
- * <a href="https://gitee.com/LiaoChunping/Jasmine/wikis/Home"target="_blank">文档</a> | <a href="https://gitee.com/LiaoChunping/Jasmine/repository/archive/main.zip"target="_blank">下载</a>
- * QQ   群：<a href="https://qm.qq.com/cgi-bin/qm/qr?k=oXM0EmLxXmgKfE1UDRlBY-g7Rkrx30oL&jump_from=webapi&authKey=uQdwWraveNKYBm/BQs88WXkNagEUr9tCkf/gbdQ9FasOviKYVhUd/wUME0q0AtnI" target="_blank">539165194</a>
+ * <a href="https://gitee.com/LiaoChunping/Jasmine/wikis/Home"target="_blank">原版文档</a> | <a href="https://github.com/Royapagee/Jasmine_Plus"target="_blank">修改版文档</a>
  *
- *
- * @package Jasmine
- * @author Kent Liao
+ * @package JasminePlus
+ * @author 罗伊
  * @version 3.1.0
- * @link https://www.liaocp.cn
+ * @link https://blog.roysgensokyo.space/
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;

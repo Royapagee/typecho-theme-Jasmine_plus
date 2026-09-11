@@ -40,6 +40,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
             <?php endwhile; ?>
         </ul>
         <ul class="nav flex-column nav-pills gap-0 row-gap-3 sticky-bottom bottom-0">
+
             <li class="nav-item d-flex justify-content-center position-relative">
                 <a class="nav-link p-0 d-flex align-items-center justify-content-center" id="bd-theme"
                    href="javascript:changeBsTheme()">

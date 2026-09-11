@@ -32,6 +32,9 @@ function generateToc() {
         return false;
     }
 
+    // 清空旧内容（用于 PJAX 后重初始化）
+    tocContent.innerHTML = '';
+
     var lastLevel = 0;
     var lastMaginLeft = 0;
 
@@ -89,9 +92,19 @@ function commentRemember(name, elName) {
     document.getElementById(elName).value = decodeURIComponent(value.split('=')[1])
 }
 
-window.addEventListener('DOMContentLoaded', function () {
+/**
+ * 初始化页面组件（可被 PJAX 重复调用）
+ */
+function initPageComponents() {
     generateToc();
-    hljs.highlightAll();
+    if (typeof hljs !== 'undefined') {
+        // 移除已高亮标记，防止 PJAX 后重复高亮导致双重转义
+        var highlighted = document.querySelectorAll('code[data-highlighted]');
+        for (var i = 0; i < highlighted.length; i++) {
+            highlighted[i].removeAttribute('data-highlighted');
+        }
+        hljs.highlightAll();
+    }
     var tables = document.querySelectorAll('#post-content table');
     tables.forEach(function (table) {
         table.classList.add('table');
@@ -105,4 +118,8 @@ window.addEventListener('DOMContentLoaded', function () {
     commentRemember("remember_author", "author")
     commentRemember("remember_mail", "mail")
     commentRemember("remember_url", "url")
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+    initPageComponents();
 })

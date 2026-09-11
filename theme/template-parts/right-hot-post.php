@@ -1,6 +1,9 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
-<div class="container-fluid p-4 mt-3 border-bottom border-light-subtle">
+
+
+<div class="container-fluid p-4 mt-0 border-bottom border-light-subtle">
+    
     <div class="row gap-2">
         <div class="col-12">
             <div class="col-12 d-flex gap-1 align-content-center">
